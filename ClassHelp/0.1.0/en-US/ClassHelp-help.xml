@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+    <command:class xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+        <command:title>
+            MyClass
+        </command:title>
+        <command:introduction>
+            <maml:para>
+                This is the synopsis of a test class.
+            </maml:para>
+        </command:introduction>
+        <command:members>
+            <command:member type="field">
+                <command:introduction>
+                    <maml:para>
+                    This is a description of a test property.
+                    </maml:para>
+                </command:introduction>
+                <command:fieldData>
+                    <command:name>
+                        Test
+                    </command:name>
+                    <dev:type>
+                        <maml:name>
+                            String
+                        </maml:name>
+                    </dev:type>
+                </command:fieldData>
+            </command:member>
+            <command:member type="field">
+                <command:introduction>
+                    <maml:para>
+                    This is another description of a different test property.
+                    </maml:para>
+                </command:introduction>
+                <command:fieldData>
+                    <command:name>
+                        SecondTest
+                    </command:name>
+                    <dev:type>
+                        <maml:name>
+                            FileInfo
+                        </maml:name>
+                    </dev:type>
+                </command:fieldData>
+            </command:member>
+            <command:member type="method">
+                <command:title>
+                    GetMyFile
+                </command:title>
+                <command:introduction>
+                    <maml:para>
+                        This method gets the SecondTest property from this instance.
+                    </maml:para>
+                </command:introduction>
+                <command:Parameters>
+                    <command:Parameter>
+                        <command:name>
+                            someValue
+                        </command:name>
+                        <dev:type>
+                            <maml:name>
+                                string
+                            </maml:name>
+                        </dev:type>
+                    </command:Parameter>
+                </command:Parameters>
+                <command:returnValue>
+                    <dev:type>
+                        <maml:name>
+                            FileInfo
+                        </maml:name>
+                    </dev:type>
+                </command:returnValue>
+            </command:member>
+        </command:members>
+        <command:examples>
+            <command:example>
+                <maml:title>
+                    -------------------------- EXAMPLE 1 --------------------------
+                </maml:title>
+                <dev:code>
+<!-- Without the "-" the first line of this is on the same line as the example header -->
+-
+$myClass = [MyClass]::new()
+$myClass.SecondTest = Get-Item .\test.txt
+$myClass.GetMyFile('Unused text')
+                </dev:code>
+                <dev:remarks>
+                    <maml:para>
+                        Uses the useless test class.
+                    </maml:para>
+                </dev:remarks>
+            </command:example>
+        </command:examples>
+        <command:relatedLinks>
+            <maml:navigationLink>
+                <maml:linkText>
+                    Online Version:
+                </maml:linkText>
+                <maml:uri>
+                    https://github.com/SeeminglyScience
+                </maml:uri>
+            </maml:navigationLink>
+            <maml:navigationLink>
+                <maml:linkText>
+                    System.IO.FileInfo:
+                </maml:linkText>
+                <maml:uri>
+                    https://msdn.microsoft.com/en-us/library/system.io.fileinfo(v=vs.110).aspx
+                </maml:uri>
+            </maml:navigationLink>
+        </command:relatedLinks>
+    </command:class>
+</helpItems>
